@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radobýl - Přírodní klenot Českého středohoří</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+</head>
+<body>
+    <!--Navigace-->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Radobýl</a>
+            <ul class="nav-links">
+                <li><a href="#about">O Radobýlu</a></li>
+                <li><a href="#places">Zajímavá místa</a></li>
+                <li><a href="#video">Video</a></li>
+                <li><a href="#map-section">Mapa</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </nav>
+
+    <!--Header-->
+    <header>
+        <video autoplay loop muted playsinline id="background-video">
+            <source src="IMG_2073.MOV" type="video/mp4">
+        </video>
+        <div class="header-content">
+            <h1 class="fade-in">Radobýl - Přírodní klenot Českého středohoří</h1>
+            <p class="fade-in delay-1">Objevte kouzelné místo s nádhernou přírodou a impozantními výhledy</p>
+            <a href="#about" class="btn fade-in delay-2">Objevit více</a>
+        </div>
+    </header>
+
+    <!--Hlavní obsah-->
+    <main>
+        <!--O Radobýlu-->
+        <section id="about">
+            <h2>O Radobýlu</h2>
+            <div class="about-container">
+                <div class="about-image">
+                    <img src="IMG_2067.JPG" alt="Pohled na vrch Radobýl">
+                </div>
+                <div class="about-text">
+                    <p>Radobýl je výrazný čedičový vrch, tyčící se nad soutokem Labe a Ohře nedaleko Litoměřic. Se svou výškou 399 metrů nad mořem nabízí jeden z nejkrásnějších panoramatických výhledů na České středohoří, Porta Bohemica a malebné město Litoměřice.</p>
+                    <p>Vrchol Radobýlu je nejen přírodní dominantou, ale také významnou kulturní památkou. Je spojován s postavou Karla Hynka Máchy, jednoho z nejvýznamnějších českých básníků. Podle legendy zde Mácha pozoroval požár v Litoměřicích 8. listopadu 1836, při jehož hašení se nachladil a krátce poté zemřel.</p>
+                    <p>Z geologického hlediska je Radobýl součástí Českého středohoří, které vzniklo vulkanickou činností před přibližně 30 miliony let. Jeho současná podoba je výsledkem dlouhodobé eroze, která odhalila vnitřní čedičové jádro původního sopečného tělesa.</p>
+                </div>
+            </div>
+        </section>
+
+        <!--Zajímavá místa-->
+        <section id="places">
+            <h2>Zajímavá místa v okolí</h2>
+            <div class="places-grid">
+                <div class="place-card">
+                    <div class="place-image">
+                        <img src="ltm.jpg" alt="Litoměřice">
+                    </div>
+                    <div class="place-content">
+                        <h3>Litoměřice</h3>
+                        <p>Historické město na soutoku Labe a Ohře s malebným náměstím, katedrálou sv. Štěpána a řadou dalších památek. Město je známé jako "Zahrada Čech" díky své bohaté zahradnické tradici.</p>
+                    </div>
+                </div>
+                <div class="place-card">
+                    <div class="place-image">
+                        <img src="porta-bohemica-brana-cech-vlastni-fotoandrle.jpg" alt="Porta Bohemica">
+                    </div>
+                    <div class="place-content">
+                        <h3>Porta Bohemica</h3>
+                        <p>Impozantní skalnatý kaňon vytvořený řekou Labe, který tvoří přirozenou bránu do Čech. Z vrcholu Radobýlu se nabízí jeden z nejkrásnějších pohledů na tento přírodní úkaz.</p>
+                    </div>
+                </div>
+                <div class="place-card">
+                    <div class="place-image">
+                        <img src="stezzka.jpg" alt="Máchova stezka">
+                    </div>
+                    <div class="place-content">
+                        <h3>Máchova stezka</h3>
+                        <p>Turistická trasa vedoucí po stopách slavného českého básníka. Stezka propojuje významná místa spojená s Máchovým životem a nabízí krásné výhledy na okolní krajinu.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Video sekce-->
+<section id="video">
+    <h2>Radobýl z ptačí perspektivy</h2>
+    <div class="video-container">
+        <p>Prohlédněte si majestátní vrch Radobýl a jeho okolí v tomto úchvatném drone videu, které zachycuje krásu a rozmanitost krajiny Českého středohoří.</p>
+        <div class="video-wrapper" style="border: 3px solid var(--primary-color); border-radius: 15px; overflow: hidden; box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);">
+            <video width="100%" controls>
+                <source src="radobyl.mp4" type="video/mp4">
+                Váš prohlížeč nepodporuje přehrávání videí.
+            </video>
+        </div>
+    </div>
+</section>
+
+        <!--Mapa-->
+        <section id="map-section">
+            <h2>Mapa oblasti</h2>
+            <p>Prozkoumejte interaktivní mapu Radobýlu a jeho okolí s vyznačenými zajímavými místy, která stojí za návštěvu.</p>
+            <div id="map"></div>
+        </section>
+    </main>
+
+    <!--Footer-->
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>O projektu</h3>
+                <p>Tento web byl vytvořen jako školní projekt zaměřený na prezentaci přírodních krás České republiky, konkrétně vrchu Radobýl a jeho okolí.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Užitečné odkazy</h3>
+                <ul class="footer-links">
+                    <li><a href="https://www.litomerice.cz/" target="_blank">Město Litoměřice</a></li>
+                    <li><a href="https://www.ceskestredohori.cz/" target="_blank">CHKO České středohoří</a></li>
+                    <li><a href="https://www.stredohori.cz/" target="_blank">Turistický portál Středohoří</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Kontakt</h3>
+                <p>Email: info@radobyl.cz</p>
+                <p>Telefon: +420 606 456 789</p>
+                <div class="social-links">
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Radobýl. Všechna práva vyhrazena.</p>
+        </div>
+    </footer>
+
+    <!--Tlačítko pro scroll nahoru-->
+    <div class="scroll-top" id="scrollTop">↑</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
